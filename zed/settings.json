@@ -1,0 +1,173 @@
+{
+	"agent": {
+		"dock": "left",
+		"default_width": 640,
+		"default_height": 320,
+		"default_model": {
+			"provider": "zed.dev",
+			"model": "claude-sonnet-4"
+		},
+		"inline_alternatives": [
+			{
+				"provider": "zed.dev",
+				"model": "gpt-4o"
+			}
+		],
+		"inline_assistant_model": {
+			"provider": "anthropic",
+			"model": "claude-4-sonnet"
+		},
+		"commit_message_model": {
+			"provider": "openai",
+			"model": "gpt-4o-mini"
+		},
+		"thread_summary_model": {
+			"provider": "google",
+			"model": "gemini-2.0-flash"
+		},
+		"notify_when_agent_waiting": "all_screens",
+		"play_sound_when_agent_done": true
+	},
+	"agent_font_size": 16,
+	"autosave": {
+		"after_delay": {
+			"milliseconds": 1000
+		}
+	},
+	"auto_install_extensions": {
+		"astro": true,
+		"biome": true,
+		"emmet": true,
+		"html": true,
+		"terraform": true
+	},
+	"chat_panel": {
+		"button": "when_in_call",
+		"dock": "right",
+		"default_width": 240
+	},
+	"edit_predictions": {
+		"disabled_globs": [".env**"],
+		"mode": "eager"
+	},
+	"git": {
+		"inline_blame": {
+			"enabled": false
+		}
+	},
+	"icon_theme": "Material Icon Theme",
+	"indent_guides": {
+		"enabled": true,
+		"line_width": 1,
+		"active_line_width": 1,
+		"coloring": "fixed",
+		"background_coloring": "indent_aware"
+	},
+	"languages": {
+		"CSS": {
+			"formatter": { "language_server": { "name": "biome" } }
+		},
+		"JavaScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			},
+			"format_on_save": "on",
+			"language_servers": ["typescript-language-server", "!vtsls", "..."]
+		},
+		"JSON": {
+			"formatter": { "language_server": { "name": "biome" } }
+		},
+		"JSONC": {
+			"formatter": { "language_server": { "name": "biome" } }
+		},
+		"Ruby": {
+			"formatter": "language_server",
+			"format_on_save": "on",
+			"language_servers": ["ruby-lsp", "!solargraph"]
+		},
+		"TSX": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			},
+			"format_on_save": "on",
+			"language_servers": ["typescript-language-server", "!vtsls", "..."]
+		},
+		"TypeScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			},
+			"format_on_save": "on",
+			"language_servers": ["typescript-language-server", "!vtsls", "..."]
+		}
+	},
+	"lsp": {
+		"ruby-lsp": {
+			"settings": {
+				"formatter": "rubocop",
+				"rubyVersionManager": "rbenv"
+			}
+		},
+		"terraform-ls": {
+			"initialization_options": {
+				"experimentalFeatures": {
+					"prefillRequiredFields": true
+				}
+			}
+		},
+		"typescript-language-server": {
+			"initialization_options": {
+				"preferences": {
+					"includeInlayParameterNameHints": "all",
+					"includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+					"includeInlayFunctionParameterTypeHints": true,
+					"includeInlayVariableTypeHints": true,
+					"includeInlayVariableTypeHintsWhenTypeMatchesName": true,
+					"includeInlayPropertyDeclarationTypeHints": true,
+					"includeInlayFunctionLikeReturnTypeHints": true,
+					"includeInlayEnumMemberValueHints": true
+				}
+			},
+			"settings": {
+				"preferences": {
+					"updateImportsOnFileMove": "always"
+				}
+			}
+		}
+	},
+	"redact_private_values": true,
+	"show_call_status_icon": true,
+	"tabs": {
+		"git_status": true,
+		"file_icons": true,
+		"show_diagnostics": "all"
+	},
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	},
+	"terminal": {
+		"dock": "bottom",
+		"default_height": 320
+	},
+	"title_bar": {
+		"show_branch_icon": true,
+		"show_onboarding_banner": true,
+		"show_user_picture": true
+	},
+	"theme": "Dracula",
+	"toolbar": {
+		"breadcrumbs": true,
+		"quick_actions": false,
+		"selections_menu": true,
+		"agent_review": true,
+		"code_actions": true
+	},
+	"ui_font_size": 16,
+	"use_autoclose": true
+}
