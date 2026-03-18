@@ -1,0 +1,89 @@
+{
+  "redact_private_values": false,
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6"
+    },
+    "commit_message_model": {
+      "provider": "google",
+      "model": "gemini-3.0-flash"
+    },
+    "dock": "left",
+    "model_parameters": [],
+    "notify_when_agent_waiting": "all_screens",
+    "play_sound_when_agent_done": true
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+      "default_config_options": {
+        "model": "claude-sonnet-4-6",
+        "mode": "plan"
+      }
+    }
+  },
+  "agent_ui_font_size": 16,
+  "always_treat_brackets_as_autoclosed": true,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "auto_indent_on_paste": true,
+  "auto_install_extensions": {
+    "astro": true,
+    "emmet": true,
+    "html": true,
+    "opentofu": true
+  },
+  "calls": {
+    "mute_on_join": true
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "colorize_brackets": true,
+  "diff_view_style": "split",
+  "file_types": {
+    "OpenTofu": ["tf"],
+    "OpenTofu Vars": ["tfvars"]
+  },
+  "edit_predictions": {
+    "disabled_globs": [".env**"],
+    "mode": "eager"
+  },
+  "icon_theme": "Material Icon Theme",
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
+  "project_panel": {
+    "sticky_scroll": true
+  },
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "theme": "Dracula",
+  "use_system_window_tabs": true
+}

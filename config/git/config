@@ -1,0 +1,47 @@
+# See https://git-scm.com/docs/git-config
+
+[user]
+	# name  = Tu Nombre
+	# email = tu@email.com
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true            # Rebase (en vez de merge) al hacer pull
+
+[push]
+	autoSetupRemote = true   # Configura upstream automáticamente al hacer push
+
+[fetch]
+	prune = true             # Elimina ramas remotas borradas al hacer fetch
+
+[diff]
+	algorithm = histogram    # Diffs más claros en líneas movidas/editadas
+	colorMoved = zebra       # Resalta bloques movidos en diffs
+	mnemonicPrefix = true    # Refs más intuitivas en el output de diff
+
+[commit]
+	verbose = true           # Incluye diff comentado en el template del commit
+
+[column]
+	ui = auto                # Output en columnas cuando sea posible
+
+[branch]
+	sort = -committerdate    # Ordena ramas por commit más reciente primero
+
+[tag]
+	sort = -version:refname  # Ordena versiones como se esperaría
+
+[rerere]
+	enabled = true           # Guarda y reutiliza resoluciones de conflictos
+	autoupdate = true        # Aplica resoluciones guardadas automáticamente
+
+[credential]
+	helper = osxkeychain
+
+[alias]
+	co   = checkout
+	br   = branch
+	ci   = commit
+	st   = status
