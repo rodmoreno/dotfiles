@@ -208,6 +208,33 @@ alias glog="git log --oneline --graph --decorate --all"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
+# k9s — contextos de EKS
+alias k9s-dev='k9s --context eks-dev'
+alias k9s-stg='k9s --context eks-stg'
+alias k9s-prod='k9s --context eks-prod'
+
 EOF
 
 success "Zsh configurado OK"
+
+###############################################
+# EKS — contextos de Kubernetes
+# Requiere: awscli (Brewfile) y perfiles AWS configurados
+###############################################
+info "Configurando contextos de EKS..."
+
+if ! command -v aws &>/dev/null; then
+  warn "AWS CLI no encontrado en PATH — omitiendo contextos de EKS"
+  warn "Instala con: brew install awscli"
+elif aws sts get-caller-identity --profile dev &>/dev/null 2>&1; then
+  aws eks update-kubeconfig --name eks-dev        --profile dev --alias eks-dev
+  aws eks update-kubeconfig --name eks-staging    --profile stg --alias eks-stg
+  aws eks update-kubeconfig --name eks-production --profile prod --alias eks-prod
+  success "Contextos de EKS configurados OK"
+else
+  warn "Credenciales AWS no configuradas — omitiendo contextos de EKS"
+  warn "Ejecuta manualmente después:"
+  warn "  aws eks update-kubeconfig --name eks-dev        --profile dev --alias eks-dev"
+  warn "  aws eks update-kubeconfig --name eks-staging    --profile stg --alias eks-stg"
+  warn "  aws eks update-kubeconfig --name eks-production --profile prod --alias eks-prod"
+fi
