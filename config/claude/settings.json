@@ -15,6 +15,9 @@
     "commit": "",
     "pr": ""
   },
+  "enabledPlugins": {
+    "skill-creator@claude-plugins-official": true
+  },
   "permissions": {
     "defaultMode": "plan",
     "allow": [
